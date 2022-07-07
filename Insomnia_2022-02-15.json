@@ -1,0 +1,1481 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-02-15T12:31:35.598Z",
+  "__export_source": "insomnia.desktop.app:v2021.7.2",
+  "resources": [
+    {
+      "_id": "req_f1d23f689ac34cddb6c229e85dacd794",
+      "parentId": "fld_67dd6f99d28949cf8ee476f0cd3654ef",
+      "modified": 1644923673198,
+      "created": 1644407693389,
+      "url": "{{ _.API_URL }}/api/v1/users/",
+      "name": "Create user",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Luis\",\n\t\"lastname\": \"Hernández\",\n\t\"birthday\": \"1995-06-22\",\n\t\"email\": \"luahernandezdu@unal.edu.co\",\n\t\"username\": \"dongnutla\",\n\t\"password\": \"Lusho1597\",\n\t\"roleId\": \"1\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_22943f4aff26478c95c514e6fe67e302"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1644497254827,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_67dd6f99d28949cf8ee476f0cd3654ef",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644790924626,
+      "created": 1644790745477,
+      "name": "Auth",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644790804469,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "parentId": null,
+      "modified": 1644792700051,
+      "created": 1643940751381,
+      "name": "Project",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_af44eceedd5449d6b546fe33f5fdd2c8",
+      "parentId": "fld_67dd6f99d28949cf8ee476f0cd3654ef",
+      "modified": 1644889372206,
+      "created": 1644410960601,
+      "url": "{{ _.API_URL }}/api/v1/auth/login",
+      "name": "Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"dongnutla\",\n\t\"password\": \"Lusho1597\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_94074f211314464cafd98812d0de6579"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1644497254777,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5975b10df50f44128953de7216079078",
+      "parentId": "fld_67dd6f99d28949cf8ee476f0cd3654ef",
+      "modified": 1644812442363,
+      "created": 1644497254677,
+      "url": "{{ _.API_URL }}/api/v1/auth/recovery",
+      "name": "Recovery password",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"luahernandezdu@unal.edu.co\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_3ed29c2bb6374369bf3dc186ae4ac84e"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1644497254752,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f90b40abcc5045c4a36673e7c04c4362",
+      "parentId": "fld_67dd6f99d28949cf8ee476f0cd3654ef",
+      "modified": 1644805109495,
+      "created": 1644631655116,
+      "url": "{{ _.API_URL }}/api/v1/auth/change-password",
+      "name": "Set new password",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY0NDgwNTA0MCwiZXhwIjoxNjQ0ODA1OTQwfQ.JCO_QmvsKCICYTCGQkocpFVveb_5hqJVnfZBlxjfLqE\",\n\t\"newPassword\": \"1597\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_3ed29c2bb6374369bf3dc186ae4ac84e"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1644497254739.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2f08d4a5445441ce9ef060110a6da9f2",
+      "parentId": "fld_e005a85863bd4cbdb834e95eff62fd53",
+      "modified": 1644923679492,
+      "created": 1644923669806,
+      "url": "{{ _.API_URL }}/api/v1/users/1",
+      "name": "Get User",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644923669806,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e005a85863bd4cbdb834e95eff62fd53",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644923659091,
+      "created": 1644923654204,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644790804444,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_3f94f150928a489c9e13db4f70b51fbd",
+      "parentId": "fld_2c4f04e74ef1402180f6ca1611bfe3eb",
+      "modified": 1644886516197,
+      "created": 1643946627816,
+      "url": "{{ _.API_URL }}/api/v1/groups/",
+      "name": "Get groups",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_f853a5df58b04f29b7824692da692c7a",
+          "name": "limit",
+          "value": "2",
+          "description": "",
+          "disabled": true
+        },
+        {
+          "id": "pair_b82bb15e991b4c65aeef4ef24aa0a275",
+          "name": "offset",
+          "value": "3",
+          "description": "",
+          "disabled": true
+        },
+        {
+          "id": "pair_82ecf5b163924aa5b89e96eaf0d4a694",
+          "name": "membersNumber",
+          "value": "8",
+          "description": "",
+          "disabled": true
+        },
+        {
+          "id": "pair_6f49a21d93804d138f538279aae1d8b2",
+          "name": "membersNumber_min",
+          "value": "7",
+          "description": "",
+          "disabled": true
+        },
+        {
+          "id": "pair_018a45c6bc344aac97141ec833fd23a7",
+          "name": "membersNumber_max",
+          "value": "8",
+          "description": "",
+          "disabled": true
+        }
+      ],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644455056202,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2c4f04e74ef1402180f6ca1611bfe3eb",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644790804419,
+      "created": 1644790804419,
+      "name": "Groups",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644790804419,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_a58f3eb51cf44d9dbef1c5b74776c78f",
+      "parentId": "fld_2c4f04e74ef1402180f6ca1611bfe3eb",
+      "modified": 1644923447715,
+      "created": 1644455056152,
+      "url": "{{ _.API_URL }}/api/v1/groups/",
+      "name": "Create groups",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Dreamcatcher\",\n\t\"koreanName\": \"드림캐쳐\",\n\t\"debutDate\": \"2017-01-13\",\n\t\"membersNumber\": 7,\n\t\"type\": \"Girl group\",\n\t\"company\": \"HappyFace entertainment\",\n\t\"fanclubName\": \"InSomnia\",\n\t\"fanclubBirth\": \"2018-03-10\",\n\t\"active\": true,\n\t\"instagram\": \"https://www.instagram.com/hf_dreamcatcher/\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_7b083baac58c497a91b9423ed00064ed"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4OTM3M30.U1_5mYEGfXjFGcHisYu16K3p4YdCFL5mn43rOy1ZhvU"
+      },
+      "metaSortKey": -1644455056152,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dab9cff08091491186625b7fec03ffc0",
+      "parentId": "fld_2c4f04e74ef1402180f6ca1611bfe3eb",
+      "modified": 1644886531461,
+      "created": 1643945086914,
+      "url": "http://localhost:3000/api/v1/groups/2",
+      "name": "Update group",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Dreamcatcher\",\n\t\"koreanName\": \"드림캐쳐\",\n\t\"membersNumber\": 7,\n\t\"debutDate\": \"2017-01-13\",\n\t\"type\": \"Girl group\",\n\t\"company\": \"Happy Face Entertainment\",\n\t\"fanclubName\": \"InSomnia\",\n\t\"fanclubBirth\": \"2018-03-10\",\n\t\"active\": true,\n\t\"instagram\": \"https://www.instagram.com/hf_dreamcatcher/\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d388daee6d8d4439981c31fdb37a6937"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644455056127,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b2d41db06ea2437b81cfaae1750cd00b",
+      "parentId": "fld_2c4f04e74ef1402180f6ca1611bfe3eb",
+      "modified": 1644886535438,
+      "created": 1643945357368,
+      "url": "{{ _.API_URL }}/api/v1/groups/3",
+      "name": "Delete Group",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDgxMjQzOH0.niRIkp6dfPvvzr2unMnpmFXUm6xMUxUDzmJJkEDTIV4"
+      },
+      "metaSortKey": -1644455056102,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5463b1d9e53940879ada29a9a588c8eb",
+      "parentId": "fld_4eb406c9f77e47e7959f3863d08294ab",
+      "modified": 1644792141215,
+      "created": 1644294125603,
+      "url": "{{ _.API_URL }}/api/v1/idols/",
+      "name": "Members",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644294125603,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_4eb406c9f77e47e7959f3863d08294ab",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644791978681,
+      "created": 1644791975620,
+      "name": "Members",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117448142.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_d25103a270e8482b978a8a3a4812586b",
+      "parentId": "fld_4eb406c9f77e47e7959f3863d08294ab",
+      "modified": 1644889399145,
+      "created": 1644792046068,
+      "url": "{{ _.API_URL }}/api/v1/idols/",
+      "name": "Create members",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Kang Eun Young\",\n\t\"koreanName\": \"강은영\",\n\t\"stageName\": \"SeeA\",\n\t\"koreanStageName\": \"시아\",\n\t\"birthday\": \"1993-08-21\",\n\t\"nationality\": \"korean\",\n\t\"birthPlace\": \"Busan\",\n\t\"position\": \"Rapera\",\n\t\"groupId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c46d0887928c4bd99dc736b6686c01b1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4OTM3M30.U1_5mYEGfXjFGcHisYu16K3p4YdCFL5mn43rOy1ZhvU"
+      },
+      "metaSortKey": -1644117448142.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7fbc4507998a456786d23b488a500ea0",
+      "parentId": "fld_4eb406c9f77e47e7959f3863d08294ab",
+      "modified": 1644886557315,
+      "created": 1644792383071,
+      "url": "{{ _.API_URL }}/api/v1/idols/2",
+      "name": "Update member",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"SeeA\",\n\t\"birth\": \"1993-08-21\",\n\t\"role\": \"Rapera\",\n\t\"groupId\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4e1391ebfea14d41a5f08c015e07da3a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448092.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1a7f0e004c884acbaa240f94347b25d9",
+      "parentId": "fld_4eb406c9f77e47e7959f3863d08294ab",
+      "modified": 1644886562083,
+      "created": 1644792536429,
+      "url": "{{ _.API_URL }}/api/v1/idols/1",
+      "name": "Delete member",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448042.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c2b44aa70e5f4b449b62feb431b256b2",
+      "parentId": "fld_bc27bfb0a1f04c938b1c7ead4df83ba5",
+      "modified": 1644834643848,
+      "created": 1644811806835,
+      "url": "{{ _.API_URL }}/api/v1/albums/",
+      "name": "Get albums",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644294125603,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_bc27bfb0a1f04c938b1c7ead4df83ba5",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644811806831,
+      "created": 1644811806831,
+      "name": "Albums",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117448092.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b88f661141574c20b154b0609aa1a096",
+      "parentId": "fld_bc27bfb0a1f04c938b1c7ead4df83ba5",
+      "modified": 1644926948067,
+      "created": 1644811806839,
+      "url": "{{ _.API_URL }}/api/v1/albums/",
+      "name": "Create albums",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Fantasy\",\n\t\"koreanName\": \"fantasy en coreano\",\n\t\"releaseDate\": \"2019-10-24\",\n\t\"producers\": [\"uno\", \"dos\", \"tres\"],\n\t\"groupId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c46d0887928c4bd99dc736b6686c01b1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448142.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9e4a10ec428b435db7a7a079ca2c9155",
+      "parentId": "fld_bc27bfb0a1f04c938b1c7ead4df83ba5",
+      "modified": 1644886578941,
+      "created": 1644811806839,
+      "url": "{{ _.API_URL }}/api/v1/albums/1",
+      "name": "Update albums",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Iriwa\",\n\t\"koreanName\": \"이리와\",\n\t\"releaseDate\": \"2018-10-24\",\n\t\"producers\": [\"Shindong\", \"WithRu\", \"Jae Do Ji\"],\n\t\"groupId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4e1391ebfea14d41a5f08c015e07da3a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448117.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0f06f801f1e44187a6968b4c1a49c6bd",
+      "parentId": "fld_bc27bfb0a1f04c938b1c7ead4df83ba5",
+      "modified": 1644886586422,
+      "created": 1644811806842,
+      "url": "{{ _.API_URL }}/api/v1/albums/1",
+      "name": "Delete albums",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448042.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_51c75a0193f7449789f4258d0c6db345",
+      "parentId": "fld_73330ecbb5cf43af805373edadf65edc",
+      "modified": 1644838645160,
+      "created": 1644838634925,
+      "url": "{{ _.API_URL }}/api/v1/songs/",
+      "name": "Get songs",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644294125603,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_73330ecbb5cf43af805373edadf65edc",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644838634921,
+      "created": 1644838634921,
+      "name": "Songs",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117448042.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_ed2ea42bcb90441790becf249eb1e0e9",
+      "parentId": "fld_73330ecbb5cf43af805373edadf65edc",
+      "modified": 1644889446198,
+      "created": 1644838634929,
+      "url": "{{ _.API_URL }}/api/v1/songs/",
+      "name": "Create songs",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Iriwa\",\n\t\"duration\": \"3:25\",\n\t\"albumId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c46d0887928c4bd99dc736b6686c01b1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448142.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d01843909a9646d7ab88792beeb13279",
+      "parentId": "fld_73330ecbb5cf43af805373edadf65edc",
+      "modified": 1644889451938,
+      "created": 1644838634929,
+      "url": "{{ _.API_URL }}/api/v1/songs/1",
+      "name": "Update songs",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Iriwa\",\n\t\"duration\": \"3:25\",\n\t\"lyrics\": [\"uno\", \"dos\", \"tres\"],\n\t\"albumId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4e1391ebfea14d41a5f08c015e07da3a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448117.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_67c8cb6c807c415cb4eff6b01ba9a3dd",
+      "parentId": "fld_73330ecbb5cf43af805373edadf65edc",
+      "modified": 1644886761474,
+      "created": 1644838634930,
+      "url": "{{ _.API_URL }}/api/v1/songs/2",
+      "name": "Delete songs",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448042.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_34ab302c16384fbbae07310461a38cff",
+      "parentId": "fld_31f53157be8e492b8e8f6b764e40723b",
+      "modified": 1644841822260,
+      "created": 1644841810419,
+      "url": "{{ _.API_URL }}/api/v1/pctypes/",
+      "name": "Get pcTypes",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644294125603,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_31f53157be8e492b8e8f6b764e40723b",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644841810415,
+      "created": 1644841810415,
+      "name": "PcTypes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117447992.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_53ba99e9a115488e99ce77a495c8d9af",
+      "parentId": "fld_31f53157be8e492b8e8f6b764e40723b",
+      "modified": 1644889827912,
+      "created": 1644841810424,
+      "url": "{{ _.API_URL }}/api/v1/pctypes/",
+      "name": "Create pcTypes",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Iriwa 2ver\",\n\t\"albumId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c46d0887928c4bd99dc736b6686c01b1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDg4NjUwN30.fs7B0FMw02hgArrNoamJniIAENFspm6sdDVYwN_-ny4"
+      },
+      "metaSortKey": -1644117448142.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1e77b41483e34f3e8f0c81d8891a56c8",
+      "parentId": "fld_31f53157be8e492b8e8f6b764e40723b",
+      "modified": 1644886817989,
+      "created": 1644841810423,
+      "url": "{{ _.API_URL }}/api/v1/pctypes/2",
+      "name": "Update pcTypes",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Iriwa 1ver\",\n\t\"albumId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4e1391ebfea14d41a5f08c015e07da3a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448117.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a89d13c4e9ac49a18d96da4575b82936",
+      "parentId": "fld_31f53157be8e492b8e8f6b764e40723b",
+      "modified": 1644842303249,
+      "created": 1644841810425,
+      "url": "{{ _.API_URL }}/api/v1/pctypes/2",
+      "name": "Delete pcTypes",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448042.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9514de30b463416bbf002f51ff7c0ce3",
+      "parentId": "fld_d942621a1244419da6d59fed90ed120b",
+      "modified": 1644885848913,
+      "created": 1644885834427,
+      "url": "{{ _.API_URL }}/api/v1/photocards/",
+      "name": "Get photocards",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644294125603,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_d942621a1244419da6d59fed90ed120b",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644885834420,
+      "created": 1644885834420,
+      "name": "Photocards",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117447942.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_42ebbecb07da4a75b4f031aa21da7a9d",
+      "parentId": "fld_d942621a1244419da6d59fed90ed120b",
+      "modified": 1644927210765,
+      "created": 1644885834433,
+      "url": "{{ _.API_URL }}/api/v1/photocards/",
+      "name": "Create photocards",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"SeeA 2ver\",\n\t\"memberId\": 1,\n\t\"pcTypeId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c46d0887928c4bd99dc736b6686c01b1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDgxMjgwM30.hpekLHCiHez0z3Dx1pgU_eFyPVgfsxjqQRY0KEB2Qyg"
+      },
+      "metaSortKey": -1644117448142.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_14bf1bfb89b840ee84ec27bb688aa2aa",
+      "parentId": "fld_d942621a1244419da6d59fed90ed120b",
+      "modified": 1644889864507,
+      "created": 1644885834431,
+      "url": "{{ _.API_URL }}/api/v1/photocards/1",
+      "name": "Update pcTypes",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"SeeA selfie\",\n\t\"memberId\": 1,\n\t\"pcTypeId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4e1391ebfea14d41a5f08c015e07da3a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448117.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_31ffb4b936554bd9b5456d64d7f06685",
+      "parentId": "fld_d942621a1244419da6d59fed90ed120b",
+      "modified": 1644889872179,
+      "created": 1644885834434,
+      "url": "{{ _.API_URL }}/api/v1/photocards/1",
+      "name": "Delete pcTypes",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448042.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_59f22b07aa9e4f70b4ab267fd96b5393",
+      "parentId": "fld_60981718d7d64a4ab42d48e655d9864f",
+      "modified": 1644923225895,
+      "created": 1644923206686,
+      "url": "{{ _.API_URL }}/api/v1/usergroups/",
+      "name": "Get userGroups",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644294125603,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_60981718d7d64a4ab42d48e655d9864f",
+      "parentId": "fld_d67a84c3851e468f929a864c8822fe77",
+      "modified": 1644926758081,
+      "created": 1644923206683,
+      "name": "UserGroups",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117447892.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_d67a84c3851e468f929a864c8822fe77",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644926762562,
+      "created": 1644926742164,
+      "name": "Relations",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117447892.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_8d9586f975fc447bb4905232050cfa69",
+      "parentId": "fld_60981718d7d64a4ab42d48e655d9864f",
+      "modified": 1644926870564,
+      "created": 1644923206693,
+      "url": "{{ _.API_URL }}/api/v1/usergroups/",
+      "name": "Create userGroups",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"userId\": 1,\n\t\"groupId\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c46d0887928c4bd99dc736b6686c01b1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDgxMjgwM30.hpekLHCiHez0z3Dx1pgU_eFyPVgfsxjqQRY0KEB2Qyg"
+      },
+      "metaSortKey": -1644117448142.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ebad82c9718f4d94a7517dfb4629b1cf",
+      "parentId": "fld_60981718d7d64a4ab42d48e655d9864f",
+      "modified": 1644926886422,
+      "created": 1644923206690,
+      "url": "{{ _.API_URL }}/api/v1/usergroups/1",
+      "name": "Update userGroups",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"userId\": 1,\n\t\"groupId\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4e1391ebfea14d41a5f08c015e07da3a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448117.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b8b45a4c124a4b29afe05fe238c68798",
+      "parentId": "fld_60981718d7d64a4ab42d48e655d9864f",
+      "modified": 1644926884153,
+      "created": 1644923206694,
+      "url": "{{ _.API_URL }}/api/v1/usergroups/1",
+      "name": "Delete userGroups",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448042.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2096f634d346426388d11f4096be683c",
+      "parentId": "fld_2fab99d8a9a94c4caf612a3fcec37b3c",
+      "modified": 1644926787071,
+      "created": 1644926772765,
+      "url": "{{ _.API_URL }}/api/v1/useralbums/",
+      "name": "Get userAlbums",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644294125603,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2fab99d8a9a94c4caf612a3fcec37b3c",
+      "parentId": "fld_d67a84c3851e468f929a864c8822fe77",
+      "modified": 1644926772764,
+      "created": 1644926772764,
+      "name": "UserAlbums",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117447842.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_9ac395dc81584693b7a78a2338640c57",
+      "parentId": "fld_2fab99d8a9a94c4caf612a3fcec37b3c",
+      "modified": 1644926987182,
+      "created": 1644926772767,
+      "url": "{{ _.API_URL }}/api/v1/useralbums/",
+      "name": "Create userAlbums",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"userId\": 1,\n\t\"albumId\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c46d0887928c4bd99dc736b6686c01b1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDgxMjgwM30.hpekLHCiHez0z3Dx1pgU_eFyPVgfsxjqQRY0KEB2Qyg"
+      },
+      "metaSortKey": -1644117448142.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c0834204662747e3855935474db8ff88",
+      "parentId": "fld_2fab99d8a9a94c4caf612a3fcec37b3c",
+      "modified": 1644926983642,
+      "created": 1644926772766,
+      "url": "{{ _.API_URL }}/api/v1/useralbums/1",
+      "name": "Update userAlbums",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"userId\": 1,\n\t\"groupId\": 2\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4e1391ebfea14d41a5f08c015e07da3a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448117.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_758b283ba8fa4a449ebd295202519859",
+      "parentId": "fld_2fab99d8a9a94c4caf612a3fcec37b3c",
+      "modified": 1644926898306,
+      "created": 1644926772768,
+      "url": "{{ _.API_URL }}/api/v1/useralbums/1",
+      "name": "Delete userAlbums",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448042.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_85a151e924324d45bf970c567241137a",
+      "parentId": "fld_7a32d234b6c3450da050bace1d091bcc",
+      "modified": 1644927248438,
+      "created": 1644927238850,
+      "url": "{{ _.API_URL }}/api/v1/userphotocards/",
+      "name": "Get userAlbums",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1644294125603,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_7a32d234b6c3450da050bace1d091bcc",
+      "parentId": "fld_d67a84c3851e468f929a864c8822fe77",
+      "modified": 1644927238849,
+      "created": 1644927238849,
+      "name": "UserPhotocards",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1644117447792.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_123fbdc2b7364ea8911330dafa84bd4d",
+      "parentId": "fld_7a32d234b6c3450da050bace1d091bcc",
+      "modified": 1644927336262,
+      "created": 1644927238852,
+      "url": "{{ _.API_URL }}/api/v1/userphotocards/",
+      "name": "Create userAlbums",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"userId\": 1,\n\t\"photocardId\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c46d0887928c4bd99dc736b6686c01b1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDgxMjgwM30.hpekLHCiHez0z3Dx1pgU_eFyPVgfsxjqQRY0KEB2Qyg"
+      },
+      "metaSortKey": -1644117448142.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_402554d39ace41f299bacba237ef096a",
+      "parentId": "fld_7a32d234b6c3450da050bace1d091bcc",
+      "modified": 1644927342528,
+      "created": 1644927238851,
+      "url": "{{ _.API_URL }}/api/v1/userphotocards/1",
+      "name": "Update userAlbums",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"userId\": 1,\n\t\"photocardId\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_4e1391ebfea14d41a5f08c015e07da3a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448117.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ba73b287194446ada6273b0f6ce53c60",
+      "parentId": "fld_7a32d234b6c3450da050bace1d091bcc",
+      "modified": 1644927257038,
+      "created": 1644927238853,
+      "url": "{{ _.API_URL }}/api/v1/userphotocards/1",
+      "name": "Delete userAlbums",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOjEsImlhdCI6MTY0NDc5MDYyMH0.-Wpr0TGjxwk1sDxzPeBrhCTBmynyy05TpJIyYuG7LjU"
+      },
+      "metaSortKey": -1644117448042.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_6ff65726756d7c9a6d33deb321c9d3e00e639f23",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1644375177655,
+      "created": 1643940751385,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1643940751385,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_6ff65726756d7c9a6d33deb321c9d3e00e639f23",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1643940751386,
+      "created": 1643940751386,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_71abb199b6094b24ab66b376b052ff8b",
+      "parentId": "wrk_18120706279e4096bfc6e2fa0d529b1e",
+      "modified": 1643940751382,
+      "created": 1643940751382,
+      "fileName": "Groups",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_65aa67fab92a4b6c9d6c205328d87b72",
+      "parentId": "env_6ff65726756d7c9a6d33deb321c9d3e00e639f23",
+      "modified": 1644833732867,
+      "created": 1644375182023,
+      "name": "Localhost",
+      "data": { "API_URL": "http://localhost:3000" },
+      "dataPropertyOrder": { "&": ["API_URL"] },
+      "color": "#1eff00",
+      "isPrivate": false,
+      "metaSortKey": 1644375182023,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_b457d81d69694beaac7b2fc6d1113608",
+      "parentId": "env_6ff65726756d7c9a6d33deb321c9d3e00e639f23",
+      "modified": 1644792013689,
+      "created": 1644375224277,
+      "name": "Production",
+      "data": { "API_URL": "https://frozen-shelf-58577.herokuapp.com" },
+      "dataPropertyOrder": { "&": ["API_URL"] },
+      "color": "#ff0000",
+      "isPrivate": false,
+      "metaSortKey": 1644375224277,
+      "_type": "environment"
+    }
+  ]
+}
